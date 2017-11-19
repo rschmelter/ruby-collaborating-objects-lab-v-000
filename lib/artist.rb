@@ -16,6 +16,7 @@ class Artist
 
   def save
     @@all << self
+    self
   end
 
   def self.all
@@ -27,7 +28,7 @@ class Artist
     artist_instance = @@all.detect {|a| a.name == artist}
     if artist_instance
       artist_instance
-  else
+    else
       artist = Artist.new(artist)
       artist.save
     end
