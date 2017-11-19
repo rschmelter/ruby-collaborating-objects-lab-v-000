@@ -29,6 +29,7 @@ class Artist
       artist_instance
   else
       artist = Artist.new(artist)
+      artist.save
     end
   end
 
