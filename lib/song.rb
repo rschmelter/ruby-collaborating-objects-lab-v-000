@@ -6,13 +6,13 @@ class Song
     @name = name
   end
 
-  # def artist=(name)
-  #   if self.artist.nil?
-  #     artist.name = Artist.new(name)
-  #   else
-  #     self.artist.name = name
-  #   end
-  # end
+  def artist=(name)
+    if self.artist.nil?
+      artist.name = Artist.new(name)
+    else
+      self.artist.name = name
+    end
+  end
 
   def artist_name=(artist_name)
     @artist = Artist.find_or_create_by_name(artist_name)
